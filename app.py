@@ -470,4 +470,4 @@ if not LOCAL_MODE:
     scheduler.add_job(restart_space, "interval", seconds=21600)  # every 6 hours
     scheduler.start()
 
-demo.queue(default_concurrency_limit=4).launch()
+demo.queue(default_concurrency_limit=4).launch(ssr_mode=False)
