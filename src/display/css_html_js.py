@@ -167,7 +167,8 @@ custom_css = """
 }
 
 #cg-intro-block th {
-    background: var(--cg-gradient) !important;
+    /* Gentle light-blue gradient (matches the banner family), white text. */
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%) !important;
     color: #ffffff !important;
     font-weight: 600 !important;
     font-size: 0.85rem !important;
