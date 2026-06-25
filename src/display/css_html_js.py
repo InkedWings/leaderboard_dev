@@ -51,38 +51,46 @@ custom_css = """
    1. HEADER / TITLE BANNER
    ============================================================ */
 #cg-title-banner {
-    background: var(--cg-gradient);
+    /* Bright blue hero: layered blue gradient + soft light blooms, with faint
+       two molecular line-art fragments partially shown at the top-left and
+       bottom-right (chemistry atmosphere). Glossy top highlight via inset. */
+    background:
+        url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27374%27%20height%3D%27274%27%20viewBox%3D%2744%2020%20374%20274%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27rgba%28255%2C255%2C255%2C0.18%29%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M290%20150%20L250%20219%20L170%20219%20L130%20150%20L170%2081%20L250%2081%20Z%27%2F%3E%3Cpath%20d%3D%27M290%20150%20L360%20150%20L400%20108%27%2F%3E%3Cpath%20d%3D%27M250%2081%20L290%2034%27%2F%3E%3Cpath%20d%3D%27M170%20219%20L138%20278%27%2F%3E%3Cpath%20d%3D%27M130%20150%20L58%20150%27%2F%3E%3Cpath%20d%3D%27M243%2092%20L201%2092%27%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%27rgba%28255%2C255%2C255%2C0.27%29%27%3E%3Ccircle%20cx%3D%27290%27%20cy%3D%27150%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27250%27%20cy%3D%27219%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27170%27%20cy%3D%27219%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27130%27%20cy%3D%27150%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27170%27%20cy%3D%2781%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27250%27%20cy%3D%2781%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27360%27%20cy%3D%27150%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27400%27%20cy%3D%27108%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27290%27%20cy%3D%2734%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27138%27%20cy%3D%27278%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%2758%27%20cy%3D%27150%27%20r%3D%278%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat left -85px top -55px / 260px auto,
+        url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27374%27%20height%3D%27274%27%20viewBox%3D%2744%2020%20374%20274%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27rgba%28255%2C255%2C255%2C0.18%29%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M290%20150%20L250%20219%20L170%20219%20L130%20150%20L170%2081%20L250%2081%20Z%27%2F%3E%3Cpath%20d%3D%27M290%20150%20L360%20150%20L400%20108%27%2F%3E%3Cpath%20d%3D%27M250%2081%20L290%2034%27%2F%3E%3Cpath%20d%3D%27M170%20219%20L138%20278%27%2F%3E%3Cpath%20d%3D%27M130%20150%20L58%20150%27%2F%3E%3Cpath%20d%3D%27M243%2092%20L201%2092%27%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%27rgba%28255%2C255%2C255%2C0.27%29%27%3E%3Ccircle%20cx%3D%27290%27%20cy%3D%27150%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27250%27%20cy%3D%27219%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27170%27%20cy%3D%27219%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27130%27%20cy%3D%27150%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27170%27%20cy%3D%2781%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27250%27%20cy%3D%2781%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27360%27%20cy%3D%27150%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27400%27%20cy%3D%27108%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27290%27%20cy%3D%2734%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%27138%27%20cy%3D%27278%27%20r%3D%278%27%2F%3E%3Ccircle%20cx%3D%2758%27%20cy%3D%27150%27%20r%3D%278%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat right -98px bottom -72px / 285px auto,
+        radial-gradient(900px 440px at 86% -22%, rgba(147, 197, 253, 0.50), transparent 60%),
+        radial-gradient(760px 420px at 6% 122%, rgba(37, 99, 235, 0.42), transparent 55%),
+        linear-gradient(125deg, #1e40af 0%, #2563eb 52%, #3b82f6 100%);
     border-radius: var(--cg-radius);
     padding: 2rem 2.5rem 1.8rem;
     margin-bottom: 1rem;
-    box-shadow: var(--cg-shadow-lg);
-    text-align: center;
+    box-shadow: var(--cg-shadow-lg), inset 0 1px 0 0 rgba(255, 255, 255, 0.20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: left;
     position: relative;
     overflow: hidden;
 }
 
-#cg-title-banner::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+/* ChemGraph icon seated on a white disc for contrast on the blue banner. */
+#cg-title-banner .cg-title-logo {
+    flex-shrink: 0;
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
-    pointer-events: none;
+    background: #ffffff;
+    padding: 7px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    position: relative;
+    z-index: 1;
 }
 
-#cg-title-banner::after {
-    content: "";
-    position: absolute;
-    bottom: -40%;
-    left: -10%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
+#cg-title-banner .cg-title-text {
+    text-align: left;
+    position: relative;
+    z-index: 1;
 }
 
 #cg-title-banner h1 {
@@ -108,7 +116,8 @@ custom_css = """
 
 #cg-title-banner .cg-badge-row {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 0.6rem;
     margin-top: 1rem;
     position: relative;
@@ -820,6 +829,14 @@ custom_css = """
 @media (max-width: 768px) {
     #cg-title-banner {
         padding: 1.5rem 1rem 1.3rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.9rem;
+    }
+
+    #cg-title-banner .cg-title-logo {
+        width: 60px;
+        height: 60px;
     }
 
     #cg-title-banner h1 {
@@ -832,6 +849,7 @@ custom_css = """
 
     #cg-title-banner .cg-badge-row {
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .tab-buttons button {
