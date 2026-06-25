@@ -1027,7 +1027,6 @@ def init_leaderboard(dataframe):
 demo = gr.Blocks(css=custom_css, head=group_columns_head)
 with demo:
     gr.HTML(TITLE)
-    gr.Markdown(INTRODUCTION_TEXT, elem_classes="markdown-text", elem_id="cg-intro-block")
 
     with gr.Tabs(elem_classes="tab-buttons") as tabs:
         def _benchmark_subtabs(label, df, metrics_df, base_elem_id):
@@ -1406,6 +1405,8 @@ with demo:
                 ],
                 submission_result,
             )
+
+    gr.Markdown(INTRODUCTION_TEXT, elem_classes="markdown-text", elem_id="cg-intro-block")
 
     with gr.Row(elem_id="cg-citation-section"):
         with gr.Accordion("📙 Citation", open=False):
